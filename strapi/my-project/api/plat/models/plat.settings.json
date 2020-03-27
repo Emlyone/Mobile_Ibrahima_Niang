@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "plats",
+  "info": {
+    "name": "Plat"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "prix": {
+      "type": "integer",
+      "min": 0,
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "restaurants": {
+      "via": "plats",
+      "collection": "restaurant"
+    }
+  }
+}
